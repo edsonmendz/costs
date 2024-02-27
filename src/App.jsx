@@ -4,7 +4,6 @@ import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contatct";
 import NewProject from "./components/pages/NewProject";
 import Container from "./components/layout/Container";
-import './components/layout/container.module.css'
 
 
 

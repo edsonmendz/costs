@@ -1,8 +1,8 @@
-import styles from './container.module.css'
+import '../layout/estilo.css'
 
 function Container(props) {
   return (
-    <div className={`${styles.container} ${styles[props.customClass]}`}>
+    <div className='minHeigth container'>
       {props.children}
     </div>
   )
