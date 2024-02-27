@@ -6,21 +6,22 @@ import NewProject from "./components/pages/NewProject";
 import Container from "./components/layout/Container";
 
 
+
 function App() {
   return (
 
     <Router>
 
       <div>
-      <ul>
-        <Link to="/" >Home</Link>
-        <Link to="/contact" >Contato</Link>
-        <Link to="company" >Empresa</Link>
-        <Link to="newproject" >Novo Projeto</Link>
-      </ul>
+        <ul>
+          <Link to="/" >Home</Link>
+          <Link to="/contact" >Contato</Link>
+          <Link to="company" >Empresa</Link>
+          <Link to="newproject" >Novo Projeto</Link>
+        </ul>
       </div>
 
-      <Container>
+      <Container >
         <Routes>
           <Route path="/" element= {< Home />}/>
           <Route path="/company" element= {< Company />}/>
