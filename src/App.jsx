@@ -4,6 +4,7 @@ import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contatct";
 import NewProject from "./components/pages/NewProject";
 import Container from "./components/layout/Container";
+import './components/layout/container.module.css'
 
 
 
@@ -22,7 +23,7 @@ function App() {
       </div>
 
       <Container >
-        <Routes>
+        <Routes className='minHeigth'>
           <Route path="/" element= {< Home />}/>
           <Route path="/company" element= {< Company />}/>
           <Route path="/contact" element= {< Contact />}/>
