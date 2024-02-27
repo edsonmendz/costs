@@ -1,4 +1,4 @@
-
+import '../layout/'
 
 function Home() {
     return (
