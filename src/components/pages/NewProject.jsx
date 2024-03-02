@@ -1,26 +1,27 @@
 import './NewProject.css'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ProjectForm from '../project/ProjectForm';
 
 function NewProject() {
     
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     function createPost(project) {
         //initialize cost and sets
         project.cost = 0
         project.services = []
+        
 
         fetch("http://localhost:5000/projects", {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(project)
+            body: JSON.stringify(project),
             }
         ).then((resposta) => resposta.json())
             .then((data) => {
                 console.log(data)
                 //redirecionamento
-                Navigate("/projects", { message: "Projeto criado com sucesso!" });
+                navigate("/projects", { message: "Projeto criado com sucesso!" });
             }
         ).catch((e) => {console.log(e)})
     }

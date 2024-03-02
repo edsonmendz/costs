@@ -5,7 +5,7 @@ import SubmitButton from '../form/SubmitButton';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-function ProjectForm({ handleCategory, btnText, projectData}) {
+function ProjectForm({ handleSubmit, btnText, projectData}) {
 
     const [categories, setCategories] = useState([])
     const [project, setProject] = useState(projectData || {})
@@ -16,8 +16,7 @@ function ProjectForm({ handleCategory, btnText, projectData}) {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
-    .then((resposta) => resposta.json())
+    }).then((resposta) => resposta.json())
     .then((data) => {
         setCategories(data)
     })
@@ -34,12 +33,12 @@ function ProjectForm({ handleCategory, btnText, projectData}) {
         setProject({ ...project, [e.target.name]: e.target.value})
     }
 
-    function handleSubmit(e) {
+    function handleCategory(e) {
         setProject({ 
             ...project,
             category:{
                 id: e.target.value,
-                name: e.target.options[e.target.selectedIndex].text
+                name: e.target.options[e.target.selectedIndex].text,
             }
         })
     }
@@ -48,10 +47,21 @@ function ProjectForm({ handleCategory, btnText, projectData}) {
     return (
         <form onSubmit={submit} className='form'>
             <div>
-                <Input value={project.name ? project.name : ''} type={'text'} text={'Nome do Projeto'} name='name' placeholder={'Insira o nome do Projeto'} handleOnchange={handleChange}></Input>
+                <Input 
+                value={project.name ? project.name : ''} 
+                type={'text'} text={'Nome do Projeto'} 
+                name='name' 
+                placeholder={'Insira o nome do Projeto'} 
+                handleOnchange={handleChange}>
+                </Input>
             </div>
             <div>
-                <Input value={project.budget ? project.budget : ''} type={'number'} text={'Orçamento do Projeto'} name='budget' placeholder={'Orçamento total'} handleOnchange={handleChange}></Input>
+                <Input 
+                value={project.budget ? project.budget : ''} 
+                type={'number'} text={'Orçamento do Projeto'} 
+                name='budget' placeholder={'Orçamento total'} 
+                handleOnchange={handleChange}>                    
+                </Input>
             </div>
             <div>
                 <Select 
