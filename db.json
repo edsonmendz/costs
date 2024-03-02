@@ -45,18 +45,9 @@
       "services": []
     },
     {
-      "id": "7d9b",
-      "name": "123",
-      "budget": "7878",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
       "id": "91c7",
+      "name": "Estava sem nome",
+      "budget": "100",
       "category": {
         "id": "3",
         "name": "Design"
@@ -104,94 +95,6 @@
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "7b24",
-      "name": "asd",
-      "budget": "80000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "fed1",
-      "name": "vish",
-      "budget": "5123",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "abe2",
-      "name": "444",
-      "budget": "56",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "242c",
-      "name": "edsonson",
-      "budget": "877897987",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "2483",
-      "name": "uuiii",
-      "budget": "7698",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "2fe2",
-      "name": "eqwe",
-      "budget": "123123",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "54ca",
-      "name": "124555",
-      "budget": "65879759",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "80d9",
-      "name": "7888",
-      "budget": "54747",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
       },
       "cost": 0,
       "services": []

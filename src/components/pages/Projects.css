@@ -1,0 +1,18 @@
+.project_container {
+  padding: 2em;
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.ajuste_card{
+  width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 0 auto;
+  flex-wrap: wrap;
+}
