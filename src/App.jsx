@@ -8,6 +8,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Projects from "./components/pages/Projects";
 import Project from "./components/pages/Project";
+import CustoTotal from './components/pages/custototal'
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/newproject" element= {< NewProject />}/>
           <Route path='/projects' element= {<Projects />}/>
           <Route path='/project/:id' element= {<Project />}/>
+          <Route path="/custototal" element= {<CustoTotal />}/>
         </Routes>
       </Container>
 

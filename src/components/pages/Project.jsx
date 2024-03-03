@@ -134,6 +134,10 @@ function Project() {
       })
   }
 
+  function custoTotal() {
+    
+  }
+
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm)
   }
