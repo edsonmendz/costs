@@ -31,6 +31,7 @@ function ProjectForm({ handleSubmit, btnText, projectData}) {
 
     function handleChange(e) {
         setProject({ ...project, [e.target.name]: e.target.value})
+        console.log(project)
     }
 
     function handleCategory(e) {

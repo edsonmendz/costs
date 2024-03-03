@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid'
+import { parse, v4 as uuidv4 } from 'uuid'
 
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -34,7 +34,7 @@ function Project() {
           .then((resp) => resp.json())
           .then((data) => {
             setProject(data)            
-            setServices(data.services)
+            setServices(data.services)            
           }),
       1000,
     )
@@ -68,11 +68,11 @@ function Project() {
   function createService(project) {
     // last service
     const lastService = project.services[project.services.length - 1]
-
-    lastService.id = uuidv4()
+   
+    lastService.id = uuidv4()    
 
     const lastServiceCost = lastService.cost
-
+    
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
 
     // maximum value validation
@@ -186,7 +186,7 @@ function Project() {
             <h2>Serviços:</h2>
             <Container customClass="start">
               {services.length > 0 &&
-                services.map((service) => (
+                services.map((service) => (                  
                   <ServiceCard
                     id={service.id}
                     name={service.name}
@@ -194,7 +194,7 @@ function Project() {
                     description={service.description}
                     key={service.id}
                     handleRemove={removeService}
-                  />
+                  /> 
                 ))}
               {services.length === 0 && <p>Não há serviços cadastrados.</p>}
             </Container>

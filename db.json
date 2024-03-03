@@ -22,10 +22,10 @@
       "cost": null,
       "services": [
         {
-          "id": "fac84f85-917a-4f80-95ae-ee92b5fdc2c7"
-        },
-        {
-          "id": "cbeca00b-cdc6-44b2-9f8c-1914e42ef7ff"
+          "name": "Edson Mendes Nunes",
+          "cost": "55",
+          "description": "10",
+          "id": "1eaed024-b7a4-47e5-9c34-4dfe29837b13"
         }
       ]
     },
@@ -37,8 +37,12 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": []
+      "cost": null,
+      "services": [
+        {
+          "id": "e02d9a66-4522-4ede-93a6-adef8ed592f3"
+        }
+      ]
     },
     {
       "id": "6e97",

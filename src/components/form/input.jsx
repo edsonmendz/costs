@@ -1,6 +1,7 @@
 import './input.css'
 
 function Input({ type, text, name, placeholder, handleOnchange, value}) {
+    
     return (
         <div className='form_control'>
             <label htmlFor={name}>{text}</label>
