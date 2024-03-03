@@ -9,8 +9,8 @@ import Loading from '../layout/Loading'
 import Container from '../layout/Container'
 import ProjectForm from '../project/ProjectForm'
 import Message from '../layout/Message'
-//import ServiceForm from '../service/ServiceForm'
-//import ServiceCard from '../service/ServiceCard'
+import ServiceForm from '../service/ServiceForm'
+import ServiceCard from '../service/ServiceCard'
 
 function Project() {
   let { id } = useParams()
@@ -33,14 +33,15 @@ function Project() {
         })
           .then((resp) => resp.json())
           .then((data) => {
-            setProject(data)
+            setProject(data)            
             setServices(data.services)
           }),
-      0,
+      1000,
     )
   }, [id])
 
   function editPost(project) {
+    setMessage('')
     // budget validation
     if (project.budget < project.cost) {
       setMessage('O Orçamento não pode ser menor que o custo do projeto!')
@@ -140,7 +141,7 @@ function Project() {
         <div className='project_details'>
           <Container customClass="column">
             {message && <Message type={type} msg={message} />}
-            <div className='details_container'>
+            <div className='details_container form'>
               <h1>Projeto: {project.name}</h1>
               <button className='btn' onClick={toggleProjectForm}>
                 {!showProjectForm ? 'Editar projeto' : 'Fechar'}
@@ -167,7 +168,7 @@ function Project() {
                 </div>
               )}
             </div>
-            <div className='service_form_container'>
+            <div className='service_form_container form'>
               <h2>Adicione um serviço:</h2>
               <button className='btn' onClick={toggleServiceForm}>
                 {!showServiceForm ? 'Adicionar Serviço' : 'Fechar'}

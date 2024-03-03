@@ -13,47 +13,21 @@
     },
     {
       "id": "d686",
-      "name": "edsonson12",
-      "budget": "579999",
+      "name": "edsonson2024",
+      "budget": "50000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "192b",
-      "name": "edsonson12",
-      "budget": "579999",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "9908",
-      "name": "123",
-      "budget": "7878",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "91c7",
-      "name": "Estava sem nome",
-      "budget": "100",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
+      "cost": null,
+      "services": [
+        {
+          "id": "fac84f85-917a-4f80-95ae-ee92b5fdc2c7"
+        },
+        {
+          "id": "cbeca00b-cdc6-44b2-9f8c-1914e42ef7ff"
+        }
+      ]
     },
     {
       "id": "5d0f",
@@ -84,17 +58,6 @@
       "category": {
         "id": "3",
         "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "a276",
-      "name": "projetão",
-      "budget": "999999",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": []
