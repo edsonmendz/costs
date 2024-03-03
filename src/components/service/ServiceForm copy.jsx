@@ -12,13 +12,9 @@ function ServiceForm({ handleSubmit, btnText, projectData }) {
     
     // Não é recomendado modificar diretamente o estado anterior
     // Em vez disso, você pode criar um novo objeto com os valores atualizados
-    // Criar uma cópia do array de serviços do projeto
-    const updatedServices = [...projectData.services, service]
-
-    // Criar uma cópia do objeto do projeto com os serviços atualizados
     const updatedProjectData = {
       ...projectData,
-      services: updatedServices
+      services: [...projectData.services, service]
     }
     
     handleSubmit(updatedProjectData)

@@ -72,11 +72,15 @@ function Project() {
     lastService.id = uuidv4()    
 
     const lastServiceCost = lastService.cost
-    
-    const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
 
+    let a = parseFloat(project.cost)
+    let b = parseFloat(lastServiceCost)
+
+    const budget = parseFloat(project.budget);
+    const newCost = a + b    
+    
     // maximum value validation
-    if (newCost > parseFloat(project.budget)) {
+    if (newCost > budget) {
       setMessage('Orçamento ultrapassado, verifique o valor do serviço!')
       setType('error')
       project.services.pop()
@@ -84,7 +88,10 @@ function Project() {
     }
 
     // add service cost to project cost total
-    project.cost = newCost
+    project.cost = newCost    
+
+    // Atualizar o estado do projeto com o novo objeto project
+    setProject(project);
 
     fetch(`http://localhost:5000/projects/${project.id}`, {
       method: 'PATCH',
@@ -163,7 +170,7 @@ function Project() {
                   <ProjectForm
                     handleSubmit={editPost}
                     btnText="Concluir Edição"
-                    projectData={project}
+                    projectData={project}  // Certifique-se de passar o estado atualizado do projeto
                   />
                 </div>
               )}
@@ -178,7 +185,7 @@ function Project() {
                   <ServiceForm
                     handleSubmit={createService}
                     btnText="Adicionar Serviço"
-                    projectData={project}
+                    projectData={project}  // Certifique-se de passar o estado atualizado do projeto
                   />
                 )}
               </div>
@@ -194,6 +201,7 @@ function Project() {
                     description={service.description}
                     key={service.id}
                     handleRemove={removeService}
+                    project={project}  // Certifique-se de passar o estado atualizado do projeto
                   /> 
                 ))}
               {services.length === 0 && <p>Não há serviços cadastrados.</p>}

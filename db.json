@@ -32,7 +32,7 @@
     {
       "id": "5d0f",
       "name": "edsonson",
-      "budget": "789789",
+      "budget": "300",
       "category": {
         "id": "3",
         "name": "Design"
@@ -40,7 +40,16 @@
       "cost": null,
       "services": [
         {
-          "id": "e02d9a66-4522-4ede-93a6-adef8ed592f3"
+          "name": "edsonson2",
+          "cost": "1000",
+          "description": "refrescar a garganta",
+          "id": "0a4f4e36-e329-4892-abfc-97e1b6b56f4c"
+        },
+        {
+          "name": "edsonson2",
+          "cost": "11",
+          "description": "testar a adição de serviços",
+          "id": "f7884fa2-a9c5-493c-a986-18f1e423f0c1"
         }
       ]
     },
