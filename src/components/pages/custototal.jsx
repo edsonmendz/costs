@@ -1,35 +1,36 @@
 import { useState, useEffect } from 'react';
-
+import ServiceCard from '../service/ServiceCard';
 
 function CustoTotal() {
-    const [projects, setProjects] = useState([]);
+    const [dados, setDados] = useState()
 
-    
-
-    useEffect(() =>{
-
-        setTimeout(() => {
-            fetch("http://localhost:5000/projects", {
+    useEffect(() => {
+        fetch("http://localhost:5000/projects", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
-            }}).then((resposta) => resposta.json())
-            .then((data) => {
-                setProjects(data)
-                console.log('interação')              
-            })
-            .catch((erro) => console.log(erro))
-        }, 0)
-
-        }, [])
-
+            }
+        })
+        .then((resposta) => resposta.json())
+        .then((data) => { 
+            setDados(data)
+            console.log(data)            
+        })
+        .catch((erro) => console.log(erro));
+    }, []);
 
     return (
         <div>
-            {projects}
+            {console.log(dados)}
+            <ServiceCard
+            name={dados.name}
+            cost={dados.cost}
+            description={dados.description}
+            key={dados.id}           
             
+            />
         </div>
-    )
+    );
 }
 
-export default CustoTotal
+export default CustoTotal;
