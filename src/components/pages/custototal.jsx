@@ -5,7 +5,7 @@ function CustoTotal() {
     const [dados, setDados] = useState()
 
     useEffect(() => {
-        fetch("http://localhost:5000/projects", {
+        fetch("http://localhost:5000/projects/id:5d0f", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
@@ -24,8 +24,7 @@ function CustoTotal() {
             {console.log(dados)}
             <ServiceCard
             name={dados.name}
-            cost={dados.cost}
-            description={dados.description}
+            
             key={dados.id}           
             
             />

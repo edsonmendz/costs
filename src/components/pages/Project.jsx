@@ -34,7 +34,7 @@ function Project() {
           .then((resp) => resp.json())
           .then((data) => {
             setProject(data)            
-            setServices(data.services)            
+            setServices(data.services)                 
           }),
       1000,
     )
@@ -65,6 +65,28 @@ function Project() {
       })
   }
 
+  function calcularTotalCost(services) {
+    if (!services || !services.length) {
+      return 0; // Retorna 0 se o array de serviços estiver vazio ou indefinido
+    }
+    
+    let total = 0;
+    for (let i = 0; i < services.length; i++) {
+      total += parseFloat(services[i].cost); // Converte o valor de cost para um número e soma ao total
+    }
+    return total;
+  }
+  
+  // Exemplo de uso:
+  if (project.services) {
+    const totalCost = calcularTotalCost(project.services);
+    console.log("O custo total dos serviços é:", totalCost);
+  } else {
+    console.log("Nenhum serviço encontrado.");
+  }
+    
+  
+
   function createService(project) {
     // last service
     const lastService = project.services[project.services.length - 1]
@@ -91,7 +113,7 @@ function Project() {
     project.cost = newCost    
 
     // Atualizar o estado do projeto com o novo objeto project
-    setProject(project);
+    setProject(project);    
 
     fetch(`http://localhost:5000/projects/${project.id}`, {
       method: 'PATCH',
@@ -133,10 +155,7 @@ function Project() {
         setMessage('Serviço removido com sucesso!')
       })
   }
-
-  function custoTotal() {
-    
-  }
+  
 
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm)
@@ -166,7 +185,7 @@ function Project() {
                     <span>Total do orçamento:</span> R${project.budget}
                   </p>
                   <p>
-                    <span>Total utilizado:</span> R${project.cost}
+                    <span>Total utilizado:</span> R$ {calcularTotalCost(services)}
                   </p>
                 </div>
               ) : (
